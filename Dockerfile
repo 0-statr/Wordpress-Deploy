@@ -7,10 +7,10 @@ RUN curl -o /tmp/pg4wp.tar.gz -SL https://downloads.wordpress.org/plugin/postgre
 
 COPY pg4wp/db.php /var/www/html/wp-content/db.php
 
-ENV WORDPRESS_DB_HOST=your-database-host
-ENV WORDPRESS_DB_USER=your-database-user
-ENV WORDPRESS_DB_PASSWORD=your-database-password
-ENV WORDPRESS_DB_NAME=your-database-name
+ENV WORDPRESS_DB_HOST=dpg-cpe5ipn109ks73eq12h0-a.oregon-postgres.render.com
+ENV WORDPRESS_DB_USER=tamilloggers
+ENV WORDPRESS_DB_PASSWORD=wH5HZ627ED1lLpJL5XunItNFJo0t1xJN
+ENV WORDPRESS_DB_NAME=tamilloggers
 
 EXPOSE 80
 
