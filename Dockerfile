@@ -2,7 +2,7 @@
 FROM wordpress:latest
 
 # Install required packages for debugging
-RUN apt-get update && apt-get install -y curl
+RUN apt-get update && apt-get install -y curl && apt-get install -y git
 
 RUN apt-get install -y libpq-dev \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
