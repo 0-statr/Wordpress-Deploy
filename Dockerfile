@@ -5,7 +5,7 @@ FROM wordpress:latest
 RUN apt-get update && apt-get install -y curl
 
 # 
-RUN ocker-php-ext-install pgsql pdo_pgsql
+RUN docker-php-ext-install pgsql pdo_pgsql
 
 # Set up error handling
 RUN set -e
