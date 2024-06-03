@@ -4,8 +4,9 @@ FROM wordpress:latest
 # Install required packages for debugging
 RUN apt-get update && apt-get install -y curl
 
-# 
-RUN docker-php-ext-install pgsql pdo_pgsql
+RUN apt-get install -y libpq-dev \
+    && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
+    && docker-php-ext-install pdo pdo_pgsql pgsql
 
 # Set up error handling
 RUN set -e
