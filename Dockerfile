@@ -18,7 +18,6 @@ RUN git clone https://github.com/kevinoid/postgresql-for-wordpress.git && \
     echo "Extraction successful" && \
     mv /tmp/pg4wp /var/www/html/wp-content/plugins/pg4wp && \
     echo "Move successful" && \
-    rm /tmp/pg4wp.tar.gz && \
     echo "Cleanup successful"
 
 # Copy the PostgreSQL configuration file
