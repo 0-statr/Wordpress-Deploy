@@ -17,14 +17,9 @@ RUN git clone https://github.com/kevinoid/postgresql-for-wordpress.git && \
     cp -rf postgresql-for-wordpress/pg4wp /tmp/pg4wp && \
     echo "Extraction successful" && \
     mv /tmp/pg4wp /var/www/html/wp-content/plugins/pg4wp && \
-    echo "Move successful" && \
-    echo "Cleanup successful"
-
-# Copy the PostgreSQL configuration file
-COPY postgresql-for-wordpress/pg4wp/db.php /var/www/html/wp-content/db.php
-
-RUN cd /var/www/html/wp-content &&\
-	cp -rp wp-config-sample.php wp-config.php
+    cp -rf /var/www/html/wp-content/plugins/pg4wp/db.php /var/www/html/wp-content/db.php  && \
+    cp -rf /var/www/html/wp-content/wp-config-sample.php  /var/www/html/wp-content/wp-config.php  &&\
+    echo "Move successful"
   
 #ENV WORDPRESS_DB_HOST=dpg-cpe5ipn109ks73eq12h0-a.oregon-postgres.render.com
 #ENV WORDPRESS_DB_USER=tamilloggers
