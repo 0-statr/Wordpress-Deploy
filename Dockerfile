@@ -20,6 +20,8 @@ RUN git clone https://github.com/kevinoid/postgresql-for-wordpress.git && \
     cp -rf /var/www/html/wp-content/plugins/pg4wp/db.php /var/www/html/wp-content/db.php  && \
     #cp -rf /var/www/html/wp-content/wp-config-sample.php  /var/www/html/wp-content/wp-config.php  &&\
     echo "Move successful"
+
+COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
   
 #ENV WORDPRESS_DB_HOST=dpg-cpe5ipn109ks73eq12h0-a.oregon-postgres.render.com
 #ENV WORDPRESS_DB_USER=tamilloggers
