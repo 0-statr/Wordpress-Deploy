@@ -21,6 +21,7 @@ RUN git clone https://github.com/kevinoid/postgresql-for-wordpress.git && \
     #cp -rf /var/www/html/wp-content/wp-config-sample.php  /var/www/html/wp-content/wp-config.php  &&\
     echo "Move successful"
 
+RUN rm -rf /usr/local/etc/php/conf.d/uploads.ini
 COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
   
 #ENV WORDPRESS_DB_HOST=dpg-cpe5ipn109ks73eq12h0-a.oregon-postgres.render.com
